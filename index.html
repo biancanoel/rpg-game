@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Bluth Battle</title>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/reset.css" type="text/css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/style.css" type="text/css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3 col-md-offset-9">
+                <h1 class="text-left">Bluth Brawl</h1>
+                <p><em>There's a fight brewing for who will be CEO of the Bluth Company! </em></p>
+            </div>
+            <div class="col-md-12">
+                <div class="row all-players">
+                    <h2 id="options-or-enemies"> Choose Your Bluth</h2>
+                    <div id = "George Bluth Sr" class="col-md-3 player" health="130" attack="12" counter-attack="9">
+                        <img src="assets/images/George Bluth Sr.jpg" alt="George Bluth Sr." width="215px" height="150px" class="img-rounded">
+                        <h6 class="text-center"> George Bluth Sr. 130 </h6>
+                    </div>
+                    <div id = "Lucille Bluth" class="col-md-3 player" health="150" attack="2" counter-attack="12">
+                        <img src="assets/images/Lucille Bluth.jpg" alt="Lucille Bluth" width="215px" height="150px" class="img-rounded">
+                        <h6 class="text-center"> Lucille Bluth  150 </h6>
+                    </div>
+                    <div id = "Gob Bluth" class="col-md-3 player" health="105" attack="10" counter-attack="11">
+                        <img src="assets/images/Gob Bluth.jpg" alt="George Bluth Jr. AKA 'Gob'" width="215px" height="150px" class="img-rounded">
+                        <h6 class="text-center"> George Bluth Jr. AKA 'Gob' 105</h6>
+                    </div>
+                    <div id = "Dr. Tobias Funke" class="col-md-3 player" health="10" attack="14" counter-attack="7">
+                        <img src="assets/images/Dr. Tobias Funke.jpg" alt="Tobias Funke" width="215px" height="150px" class="img-rounded">
+                        <h6 class="text-center"> Dr. Tobias Funke 99</h6>
+                    </div>
+                </div>
+
+                <div class="fight row">
+                    <div id = "fighter" class="col-md-3 col-md-offset-1">
+                        <h2>Your Fighter</h2>
+                       
+                    </div>
+
+                    <div class="col-md-3 attack-box"> 
+                        <button id="attack"> Attack!! </button>
+                        <h6 class="text-center" id="attack-summary"> Ready to Attack! </h6>
+                        <br> 
+                        <h6 id="damage-summary">  </h6>
+                        <button class="text-center" id="restart"> Restart </button>
+                    </div>
+
+
+                    
+                    <div  id="enemy" class="col-md-3 col-md-offset-1"> 
+                        <h2>Enemy</h2>
+                        
+
+                    </div>
+   
+
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</body>
+<script src="assets/javascript/javascript.js"></script>
+</html>

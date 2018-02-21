@@ -1,0 +1,70 @@
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.71), rgba(0, 0, 0, 0.71)), url(money.jpg);
+}
+
+h1,h2 { 
+    font-weight: 700;
+    color: rgb(244, 135, 84);
+}
+
+h6 {
+    font-size: 120%;
+    color: white;
+}
+
+.player {
+    background: rgb(244, 135, 84);
+    border: solid 2px black;
+    
+}
+.chosen-player {
+    background: rgb(249, 87, 11);
+    border: solid 2px black;
+    
+}
+
+.chosen-enemy {
+    background: rgb(24, 32, 249);
+    border: solid 2px black;
+    
+}
+.fight, .attack-box {
+    margin-top: 40px;
+}
+.attack-box {
+    background: rgb(154, 152, 152);
+    border-radius: 5px;
+    margin-top: 5%;
+    margin-left: 6%;
+}
+
+#attack, #restart {
+    border-radius: 5px;
+    background: rgb(244, 135, 84);
+    border: solid, 2px, rgb(244, 135, 84);
+    width: 130px;
+    height: 40px;
+    font-size: 130%;
+    font-weight: 700;
+    margin-left: 25%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#attack:hover, #restart:hover {
+    background-color: white;
+    color: rgb(244, 135, 84);
+}
+
+
+#restart {
+    display: none;
+}
+
+img {
+    margin-top: 5px;
+    margin-left: 25px;
+    
+}
