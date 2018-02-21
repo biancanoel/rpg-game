@@ -10,6 +10,7 @@ $(document).ready(function() {
     var enemySelected=false;
     var enemiesDefeated=0;
     var counter=0;
+    var yourFighterName=""
     function startGame () {
         //reset text
         $("#options-or-enemies").text("Bluths");
@@ -21,6 +22,7 @@ $(document).ready(function() {
         //reset variables
         fighterChosen=false;
         yourFighter="";
+        yourFighterName=""
         yourAttack=0;
         counter=0;
         yourUpdatedAttack=0;
@@ -36,16 +38,7 @@ $(document).ready(function() {
         $("div").remove(".player")
 
         //put all characters back to starting positions
-        $("#.all-players").append("<div>")
-        $("<div").html("<img src='assets/images/George Bluth Sr.jpg' alt='Lucille Bluth' width='215px' height='150px' class='img-rounded'>");
-        $("<div>").addClass("player");
-        $("#.all-players").append("<div>");
-        $("player").append("<h6 class='text-center'> George Bluth Sr </h6>")
-
-
-
-       
-
+        $("#George Bluth Sr").show(); //needs go be id name
 
 
     }
@@ -54,6 +47,7 @@ $(document).ready(function() {
         if (fighterChosen===false) {  //checks if fighter has been chosen yet
             //fighter selected
             yourFighter = $(this).attr("id");
+            yourFighterName = $(this).attr("alt");
         
             //create new div
             yourFighterDiv= $("<div>");
