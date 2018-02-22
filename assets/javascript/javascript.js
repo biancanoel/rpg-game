@@ -6,11 +6,12 @@ $(document).ready(function() {
     var yourUpdatedAttack;
     var yourHealth=0;
     var counterAttack;
-    var enemy;
+    var enemy="";
+    var enemyName="";
     var enemySelected=false;
     var enemiesDefeated=0;
     var counter=0;
-    var yourFighterName=""
+    var yourFighterName="";
     function startGame () {
         //reset text
         $("#options-or-enemies").text("Bluths");
@@ -22,23 +23,25 @@ $(document).ready(function() {
         //reset variables
         fighterChosen=false;
         yourFighter="";
-        yourFighterName=""
+        yourFighterName="";
         yourAttack=0;
         counter=0;
         yourUpdatedAttack=0;
         yourHealth=0;
         counterAttack=0;
         enemy="";
+        enemyName="";
         enemiesDefeated=0;
         enemySelected=false;
         
         //remove current enemy and current player from fighting area
         $("div").remove(".chosen-enemy");
         $("div").remove(".chosen-player");
-        $("div").remove(".player")
+        
 
         //put all characters back to starting positions
-        $("#George Bluth Sr").show(); //needs go be id name
+        $("#GeorgeBluthSr, #LucilleBluth, #GobBluth, #DrTobiasFunke").show(); //needs go be id name
+
 
 
     }
@@ -56,7 +59,7 @@ $(document).ready(function() {
             yourFighterDiv.addClass("chosen-player");
             //show chosen fighter
             $("#fighter").append(yourFighterDiv);
-            $(".chosen-player").append("<h6 class='text-center'>"+yourFighter.toLocaleUpperCase()+" </h6>");
+            $(".chosen-player").append("<h6 class='text-center'>"+yourFighter+" </h6>");
             //remove chosen fighter from options
             $(this).hide(); 
             //change heading to read enemies
@@ -75,13 +78,14 @@ $(document).ready(function() {
 
         } else {      //if fighter not chosen, click selects enemy
             enemy = $(this).attr("id");
-            console.log("your enemy is " + enemy);
+            enemyName=$(this).attr("alt");
+            console.log("your enemy is " + enemyName);
             $("#attack-summary").text("Ready to Attack!");
             enemyDiv = $("<div>");
             enemyDiv.html("<img src='assets/images/"+enemy+".jpg' alt='Lucille Bluth' width='215px' height='150px' class='img-rounded'>")
             enemyDiv.addClass("chosen-enemy");
             $("#enemy").append(enemyDiv);
-            $(".chosen-enemy").append("<h6 class='text-center'>"+enemy.toLocaleUpperCase()+" </h6>");
+            $(".chosen-enemy").append("<h6 class='text-center'>"+enemy+" </h6>");
             $(this).hide();
 
             //get counter attack and health
